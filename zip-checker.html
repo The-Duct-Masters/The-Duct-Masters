@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZIP Code Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .zip-checker {
+            text-align: center;
+            padding: 2rem;
+        }
+        input {
+            padding: 0.5rem;
+            margin: 0.5rem;
+            width: 200px;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="zip-checker">
+        <h2>Check Service Availability by ZIP Code</h2>
+        <input type="text" id="zipInput" placeholder="Enter ZIP Code">
+        <button onclick="checkZip()">Check</button>
+        <div class="result" id="resultText"></div>
+    </div>
+    <script>
+        const serviceZips = ['19107', '11581', '22203', '95757', '33028', '37204', '70002', '98055', '78217', '33030', '02176', '33301', '91411', '30341', '84047', '33401', '85225', '57106', '64108', '06511', '32801', '20852', '48201', '33426', '78729', '84111', '37901', '98092', '85742', '35217', '63130', '32311', '80216', '46077', '01581', '27616', '60118', '95820', '20906', '94608', '44101', '33432', '30093', '78758', '33060', '33444', '77074', '20770', '29407', '73129', '33012', '02135', '32202', '75230'];
+        function checkZip() {
+            const zip = document.getElementById('zipInput').value.trim();
+            const result = document.getElementById('resultText');
+            if (serviceZips.includes(zip)) {
+                result.textContent = "Yes! We provide service in your area.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Sorry, we don’t currently serve your area.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

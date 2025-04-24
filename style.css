@@ -1,0 +1,7 @@
+
+body { font-family: Arial, sans-serif; background-color: #f4f1ed; color: #3a2d2d; }
+header { background-color: #6b4c3b; color: #fff; padding: 10px; }
+.logo { width: 120px; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+nav a { color: #fff; text-decoration: none; }
+footer { background-color: #6b4c3b; color: #fff; padding: 10px; text-align: center; }
